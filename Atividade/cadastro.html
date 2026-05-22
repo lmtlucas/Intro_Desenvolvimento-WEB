@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Aprendendo html: Atividade 1</title>
+    </head>
+
+    <body>
+
+        <!-- CABEÇALHO DA PÁGINA -->
+        <header>
+            <h1>Cadastro</h1>
+
+        </header>
+
+        <hr> <!-- linha horizontal separando conteúdo -->
+        <nav>
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+        </nav>
+
+        <hr>
+        <!-- SEÇÃO DE CONTEÚDO -->
+        <main>
+
+            <!-- FORMULÁRIO -->
+            <section>
+                <form>
+
+                    <!-- Nome -->
+                    <label>Nome:</label>
+                    <input 
+                        type="text"
+                        id="nome"
+                        maxlength="30"
+                        minlength="2"
+                        placeholder="Informe seu nome..."
+                        required
+                    />
+
+                    <br>
+
+                    <!-- Email -->
+                     <label>E-mail: </label>
+                    <input type="email" placeholder="Digite seu email..." />
+
+                    <br>
+                    <!-- Telefone -->
+                     <label>Telefone: </label>
+                    <input type="tel" placeholder="Digite seu telefone..." />
+                    <br>
+                    <!-- Senha -->
+                    <label>Senha:</label>
+                    <input 
+                        type="password"
+                        minlength="6"
+                        placeholder="Digite sua senha..."
+                        required
+                    />
+                    <br>
+
+                    <!-- Radio -->
+                    <label>Masculino:</label>
+                    <input type="radio" name="sexo">
+
+                    <label>Feminino:</label>
+                    <input type="radio" name="sexo">
+
+                    <br>
+                    <!-- Upload -->
+                    <input type="file" placeholder="Escolha um arquivo"/>
+                    <br>
+                    <!-- Checkbox -->
+                    <input type="checkbox" required/> Aceito os termos
+
+                    <br>
+                    <!-- Checkbox -->
+                    <input type="checkbox" /> Quero receber novidades
+
+                    <br>
+                    <!-- BOTÃO -->
+                    <button type="submit">Cadastrar</button>
+
+                </form>
+            </section>
+
+        </main>
+
+        <hr>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <p>Desenvolvido por Lucas para aula de HTML</p>
+        </footer>
+
+    </body>
+</html>
