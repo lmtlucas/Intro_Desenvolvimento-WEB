@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: aliceblue;
+
+        }
+
+        header{
+            background-color:aquamarine;
+            padding: 20px;
+        }
+
+        header h1{
+            margin-bottom: 10px;
+            color:rgb(136, 8, 255);
+            text-align: center;
+                     
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a{
+            color:blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover{
+            color:black
+            
+        }
+        main{
+            padding: 40px;
+        }
+        section{
+            background-color: aqua;
+            padding: 30px;
+            border-radius: 20px;
+
+        }
+        button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 228, 196, 0.5);
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(255, 228, 196);
+        }
+
+        footer{
+            background-color: beige;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+    <body>
+        <!--CABEÇALHO-->
+        <header>
+            <h1>Esse é o título</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <!--CONTEÚDO-->
+        <main>
+            <section>
+                <h2>Bem-vindo</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatem praesentium ea, velit quam quos ab perspiciatis placeat asperiores unde nesciunt deleniti vero reprehenderit expedita, esse ducimus tenetur, sequi debitis.</p>
+                <button>Saiba mais</button>
+            </section>
+        </main>
+        <hr>
+        <!--RODAPÉ -->
+        <footer>
+            <p>Desenvolvido para aprender HTML</p>
+        </footer>
+    </body>
+</html>
