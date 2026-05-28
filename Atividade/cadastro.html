@@ -1,35 +1,145 @@
-<html>
-    <head>
-        <title>Aprendendo html: Atividade 1</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aprendendo html: Atividade 1</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            background-color: #f4f4f4;
+        }
+        nav{
+            background-color: #222;
+            padding: 15px;
+            display: flex;
+            justify-content:space-between;
+        }
+        nav ul{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+        nav a{
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0,9s;
+        }
+        nav a:hover{
+            color: aquamarine;
+
+        }
+
+        .container{
+            width: 400px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input{
+            width: 100%;
+            padding: 5px;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .upload-label{
+            display: inline-block;
+            padding: 5px 10px;
+            margin-top: 10px;
+            background-color: #222;
+            color: #ccc;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .upload-label:hover{
+            background-color: rgb(76, 76, 76);
+        }
+        .checkbox input, .radio input{
+            width: auto;
+        }
+
+        .checkbox, .radio{
+            margin-top: 15px;
+        }
+
+        .checkbox label, .radio label{
+            display: block;
+            margin-top: 5px;
+
+        }
+        #btn-cadastrar{
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #222;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            transition: 0,3s;
+            
+        }
+        #btn-cadastrar:hover{
+            background-color: rgb(76, 76, 76);
+            cursor: pointer;
+        }
+        footer{
+            background-color: #222;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            color: #ccc;
+        }
+    </style>
+
+
+</head>
 
     <body>
 
         <!-- CABEÇALHO DA PÁGINA -->
         <header>
-            <h1>Cadastro</h1>
-
-        </header>
-
-        <hr> <!-- linha horizontal separando conteúdo -->
         <nav>
                 <ul>
                     <li><a href="home.html">Início</a></li>
                     <li><a href="cadastro.html">Cadastro</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
+                <a href="#">Login</a>
         </nav>
 
-        <hr>
+        </header>
+
         <!-- SEÇÃO DE CONTEÚDO -->
-        <main>
+        <main class="container">
 
             <!-- FORMULÁRIO -->
             <section>
+                <h1>Cadastro</h1>
                 <form>
 
                     <!-- Nome -->
-                    <label>Nome:</label>
+                    <label for="nome">Nome:</label>
                     <input 
                         type="text"
                         id="nome"
@@ -39,55 +149,58 @@
                         required
                     />
 
-                    <br>
-
                     <!-- Email -->
-                     <label>E-mail: </label>
-                    <input type="email" placeholder="Digite seu email..." />
+                     <label for="email">E-mail: </label>
+                    <input type="email" 
+                    id="email" 
+                    placeholder="Digite seu email..." />
 
-                    <br>
+                    
                     <!-- Telefone -->
-                     <label>Telefone: </label>
-                    <input type="tel" placeholder="Digite seu telefone..." />
-                    <br>
+                    <label for="telefone">Telefone: </label>
+                    <input type="tel" id="telefone" placeholder="Digite seu telefone..." />
+                    
                     <!-- Senha -->
-                    <label>Senha:</label>
+                    <label for="senha">Senha:</label>
                     <input 
                         type="password"
+                        id="senha"
                         minlength="6"
                         placeholder="Digite sua senha..."
                         required
                     />
-                    <br>
-
-                    <!-- Radio -->
-                    <label>Masculino:</label>
-                    <input type="radio" name="sexo">
-
-                    <label>Feminino:</label>
-                    <input type="radio" name="sexo">
-
-                    <br>
                     <!-- Upload -->
-                    <input type="file" placeholder="Escolha um arquivo"/>
-                    <br>
-                    <!-- Checkbox -->
-                    <input type="checkbox" required/> Aceito os termos
+                    <label>Enviar arquivo:</label>
+                    <label for="arquivo" class="upload-label">Escolher arquivo</label>
+                    <input type="file" id="arquivo" hidden/>
+                    
+                    <div class="radio">
+                        <!-- Radio -->
+                        <p>Gênero:</p>
+                        <label><input type="radio" name="sexo"> Masculino</label>
+                        
+                        
+                        <label><input type="radio" name="sexo"> Feminino</label>
+                    </div>
 
-                    <br>
-                    <!-- Checkbox -->
-                    <input type="checkbox" /> Quero receber novidades
-
-                    <br>
+                    <div class="checkbox">
+                        <!-- Checkbox -->
+                        <p>Preferências:</p>
+                        <label><input type="checkbox" required/> Aceito os termos</label>
+                        <!-- Checkbox -->
+                        
+                        <label><input type="checkbox" /> Quero receber novidades</label>
+                    </div>
+                    
                     <!-- BOTÃO -->
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" id="btn-cadastrar">Cadastrar</button>
 
                 </form>
             </section>
 
         </main>
 
-        <hr>
+
 
         <!-- RODAPÉ -->
         <footer>
